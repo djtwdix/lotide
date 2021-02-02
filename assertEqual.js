@@ -1,13 +1,13 @@
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
-    console.log(`✅ Assertion passed: ${actual} === ${expected}`);
+    return `✅ Assertion passed: ${actual} === ${expected}`;
   } else {
-    console.log(`❌ Assertion failed: ${actual} !== ${expected}`);
+    return `❌ Assertion failed: ${actual} !== ${expected}`;
   }
 };
 
 // TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual("Bootcamp", "Bootcamp");
-assertEqual(1, 1);
-assertEqual(5, 7);
+console.log(assertEqual("Lighthouse Labs", "Bootcamp"));
+console.log(assertEqual("Bootcamp", "Bootcamp"));
+console.log(assertEqual(1, 1));
+console.log(assertEqual(5, 7));
