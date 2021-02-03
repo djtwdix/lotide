@@ -24,8 +24,8 @@ const isEven = function (arr) {
 }
 
 //determine whether array length is greater than 2
-const isThreePlus = function (arr) {
-  return arr.length > 2;
+const isTwoOrLess = function (arr) {
+  return arr.length <= 2;
 }
 
 //retrieve middle index of array
@@ -36,7 +36,7 @@ const getMiddleIndex = function(arr) {
 const middle = function (arr) {
   let middleElements = [];
   //if arr length is less than 3 return empy middleElements array
-  if (!isThreePlus(arr)) {
+  if (isTwoOrLess(arr)) {
     return middleElements;
   }
   //if arr length is odd push middle index of arr 
@@ -56,9 +56,9 @@ const myName = ["Daniel", "James", "Tweedie"];
 const toSix = [1, 2, 3, 4, 5, 6];
 const onlyTwo = ["only", "two"];
 
-/*
-tests
+
+//tests
 assertArraysEqual(middle(myName), ["James"]);
 assertArraysEqual(middle(toSix), [3, 4]);
 assertArraysEqual(middle(onlyTwo), []);
-*/
+
