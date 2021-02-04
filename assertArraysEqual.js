@@ -12,9 +12,8 @@ const eqArrays = function(arr1, arr2) {
 
 const assertArraysEqual = function(arr1, arr2) {
   if (eqArrays(arr1,arr2) === true) {
-    console.log(`✅ Assertion passed: your arrays match`);
+    console.log(`✅ Assertion passed: ${arr1} === ${arr2}`);
   } else {
-    console.log(`❌ Assertion failed: your arrays don't match`);
+    console.log(`❌ Assertion failed: ${arr1} !== ${arr2}`);
   }
 };
-
