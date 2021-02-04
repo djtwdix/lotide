@@ -18,8 +18,6 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-
-
 const takeUntil = (array, callback) => {
   for (let i = 0; i < array.length; i++) {
     const item = array[i];
@@ -27,7 +25,7 @@ const takeUntil = (array, callback) => {
       return array.slice(0, i);
     }
   }
-}
+};
 
 //test cases
 /*
