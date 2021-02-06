@@ -25,13 +25,18 @@ const eqObjects = function(obj1, obj2) {
         return false;
       }
     }
+    //if key value is object and not array, if objects are not equal, return false
+    if (typeof obj1[key] === "object" && !Array.isArray(obj1[key])) {
+      if (eqObjects(obj1[key], obj2[key]) === false) {
+        return false;
+      }
+    }
     //if key value is not an array and values don't match return false
-    if (!Array.isArray(obj1[key])) {
+    if (!Array.isArray(obj1[key]) && typeof obj1[key] !== "object") {
       if (obj1[key] !== obj2[key]) {
         return false;
       }
     }
-    
   }
   //else return true
   return true;
