@@ -34,13 +34,18 @@ const eqObjects = function(obj1, obj2) {
         return false;
       }
     }
+    //if key value is object and not array, if objects are not equal, return false
+    if (typeof obj1[key] === "object" && !Array.isArray(obj1[key])) {
+      if (eqObjects(obj1[key], obj2[key]) === false) {
+        return false;
+      }
+    }
     //if key value is not an array and values don't match return false
-    if (!Array.isArray(obj1[key])) {
+    if (!Array.isArray(obj1[key]) && typeof obj1[key] !== "object") {
       if (obj1[key] !== obj2[key]) {
         return false;
       }
     }
-    
   }
   //else return true
   return true;
@@ -62,4 +67,11 @@ console.log(eqObjects(cd, dc)); // => true
 
 const cd2 = { c: "1", d: ["2", 3, 4] };
 console.log(eqObjects(cd, cd2)); // => false
+*/
+
+//recursion test cases
+/*
+console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })) // => true
+console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })) // => false
+console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 })) // => false
 */
