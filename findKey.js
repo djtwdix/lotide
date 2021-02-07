@@ -1,27 +1,16 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertion passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌ Assertion failed: ${actual} !== ${expected}`);
-  }
-};
+//imports
+const assertEqual = require("./assertEqual");
 
+//function that takes in an object and a callback function
 const findKey = (obj, callback) => {
   const objKeys = Object.keys(obj);
+  //iterate over object keys
   for(let key of objKeys) {
+    //if callback function returns true with obj[key] as parameter return key
     if (callback(obj[key])) {
       return key;
     }
   }
 }
-//test case
-/*
-assertEqual(findKey({
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-}, x => x.stars === 1), "Blue Hill");
-*/
+
+module.exports = findKey;
