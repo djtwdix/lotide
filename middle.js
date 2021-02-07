@@ -1,22 +1,7 @@
-const eqArrays = function (arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+//imports
+const assertArraysEqual = require("./assertArraysEqual");
 
-const assertArraysEqual = function (arr1, arr2) {
-  if (eqArrays(arr1, arr2) === true) {
-    console.log(`✅ Assertion passed: your arrays match`);
-  } else {
-    console.log(`❌ Assertion failed: you arrays don't match`);
-  }
-};
+//helper functions:
 
 //determine whether array length is even or odd
 const isEven = function (arr) {
@@ -33,9 +18,12 @@ const getMiddleIndex = function(arr) {
   return arr[Math.floor((arr.length - 1) / 2)]
 }
 
+//main function:
+//function that takes in array and returns the middle-most items or item of the array
 const middle = function (arr) {
+  //initialize empty middleElements array
   let middleElements = [];
-  //if arr length is less than 3 return empy middleElements array
+  //if arr length is less than 3 return empty middleElements array
   if (isTwoOrLess(arr)) {
     return middleElements;
   }
@@ -52,13 +40,5 @@ const middle = function (arr) {
   return middleElements;
 };
 
-const myName = ["Daniel", "James", "Tweedie"];
-const toSix = [1, 2, 3, 4, 5, 6];
-const onlyTwo = ["only", "two"];
-
-
-//tests
-assertArraysEqual(middle(myName), ["James"]);
-assertArraysEqual(middle(toSix), [3, 4]);
-assertArraysEqual(middle(onlyTwo), []);
+module.exports = middle;
 
