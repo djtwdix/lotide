@@ -1,37 +1,25 @@
-const eqArrays = function (arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+//imports
+const assertArraysEqual = require("./assertArraysEqual");
 
-const assertArraysEqual = function (arr1, arr2) {
-  if (eqArrays(arr1, arr2) === true) {
-    console.log(`✅ Assertion passed: your arrays match`);
-  } else {
-    console.log(`❌ Assertion failed: your arrays don't match`);
-  }
-};
-
-const letterPositions = function (string) {
+//Function takes in a string and returns an object with the letters as keys 
+//and the positions within the string the letter occupies as values
+const letterPositions = function(string) {
+  //force lowercase on string
   string = string.toLowerCase();
+  //initalize empty object
   const positionObject = {};
-  //Ommitting spaces initialize each letter as a key in positionObject 
-  //with a value of an empty string
+  //iterate over string
   for (const letter of string) {
+    //if letter in string is not a space
     if (letter !== " ") {
+      //add letter as key to positionObject with empty array as a value
       positionObject[letter] = [];
     }
   }
-  //iterate over string and push index number to the array of the corresponding 
-  //letter in positionObject
+  //iterate over string
   for (let i = 0; i < string.length; i++) {
-    if (string[i] !== " ") {
+    //if string[i] is not a space and positionObject has string[i] as key, push i to it's array
+    if (string[i] !== " " && positionObject[string[i]]) {
       positionObject[string[i]].push(i);
     }
   }
@@ -39,8 +27,4 @@ const letterPositions = function (string) {
   return positionObject;
 }
 
-result1 = letterPositions("lighthouse in the house")
-
-//test
-assertArraysEqual(result1["n"], [12]);
-assertArraysEqual(result1["h"], [3, 5, 15, 18]);
+module.exports = letterPositions;
