@@ -1,3 +1,4 @@
+//imports
 const assertEqual = require("./assertEqual")
 
 //Function that takes in two arrays and determines whether they are equal
