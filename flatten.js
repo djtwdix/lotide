@@ -1,6 +1,3 @@
-//imports
-const assertEqual = require("./assertEqual");
-
 //function that takes in nested arrays and returns single array
 const flatten = function(arr) {
   //initialize empty array
