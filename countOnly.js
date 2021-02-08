@@ -1,6 +1,3 @@
-//imports
-const assertEqual = require("./assertEqual");
-
 //Function takes in an array and an object
 // allItems: an array of strings that we need to look through
 // itemsToCount: an object specifying what to count

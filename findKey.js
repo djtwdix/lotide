@@ -1,6 +1,3 @@
-//imports
-const assertEqual = require("./assertEqual");
-
 //function that takes in an object and a callback function
 const findKey = (obj, callback) => {
   const objKeys = Object.keys(obj);

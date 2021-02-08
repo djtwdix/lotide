@@ -1,6 +1,3 @@
-//imports
-const assertEqual = require("./assertEqual");
-
 //Function that takes in string and returns object with the letters as keys 
 //and the amount of times that letter appears as the value
 const countLetters = function (string) {

@@ -1,5 +1,5 @@
 //imports
-const eqObjects = require("./eqObjects")
+const eqObjects = require("./eqObjects");
 
 //function that takes in two objects, actual and expected
 const assertObjectsEqual = function(actual, expected) {
@@ -13,4 +13,4 @@ const assertObjectsEqual = function(actual, expected) {
   }
 };
 
-module.exports = assertObjectsEqual
+module.exports = assertObjectsEqual;

@@ -1,6 +1,3 @@
-//imports
-const assertArraysEqual = require("./assertArraysEqual");
-
 //function that takes in array and returns the middle-most items or item of the array
 const middle = function (arr) {
   const middleIndex = arr[Math.floor((arr.length - 1) / 2)];
@@ -13,6 +10,7 @@ const middle = function (arr) {
   //if arr length is odd push middle index of arr 
   if (arr.length % 2 !== 0) {
     middleElements.push(middleIndex);
+  //if arr length is even push middleIndex and middleIndex + 1
   } else {
     middleElements.push(middleIndex);
     middleElements.push(middleIndex + 1);

@@ -1,6 +1,3 @@
-//imports
-const assertArraysEqual = require("./assertArraysEqual")
-
 //Function that takes in array and a callback function
 const takeUntil = (array, callback) => {
   //iterate over array

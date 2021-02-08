@@ -1,6 +1,3 @@
-//imports
-const assertArraysEqual = require("./assertArraysEqual");
-
 //Function takes in a string and returns an object with the letters as keys 
 //and the positions within the string the letter occupies as values
 const letterPositions = function(string) {

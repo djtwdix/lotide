@@ -1,5 +1,4 @@
 //imports
-const assertEqual = require("./assertEqual");
 const eqArrays = require("./eqArrays");
 
 //Function takes in two objects and determines whether they are equal

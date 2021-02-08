@@ -1,6 +1,3 @@
-//imports
-const assertEqual = require("./assertEqual");
-
 //Function that takes in an object and a value
 const findKeyByValue = function(obj, val) {
   //get keys from object
