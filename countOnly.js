@@ -22,3 +22,5 @@ const countOnly = function (allItems, itemsToCount) {
 }
 
 module.exports = countOnly;
+
+console.log(countOnly([1,2,1,3,4], {1: true, 2: false, 3: true, 4: false}))
